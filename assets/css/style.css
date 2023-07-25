@@ -1,13 +1,13 @@
 :root {
-    --bg-color: #C46D5E;
-    --second-bg-color: #DAA588;
-    --text-color: #9CF6F6;
-    --main-color: #F56960;
-    --secondary-color: #F3C98B;
+    --bg-color: #21295C;
+    --second-bg-color: #1B3B6F;
+    --text-color: #F2E7CF;
+    --main-color: #1C7293;
+    --secondary-color:  #1C7293;
 }
 
 header {
-    background-image: linear-gradient(to right, #C46D5E, #F56960);
+    background-image: linear-gradient(to right, #21295C, #1B3B6F);
     color: var(--text-color);
     display: flex;
     justify-content: space-between;
@@ -32,6 +32,7 @@ nav a {
     margin-left: 2rem;
     margin-right: 2rem;
     transition: .3s;
+    text-decoration: none;
 
 }
 
@@ -40,12 +41,12 @@ nav a:hover, nav a:active {
 }
 
 body {
-    background-image: linear-gradient(to right, #DAA588, #F3C98B); 
-    color: var(--secondary-color);
+    background-image: linear-gradient(to right, #1B3B6F, #1C7293); 
+    color: var(--text-color);
 }
 
-section {
-    background-image: linear-gradient(to right, #C46D5E, #F56960);
+.itinerary-head, .excursions-head, .map-head, .weather-head, .gallery-head {
+    background-image: linear-gradient(to right, #1C7293, #1B3B6F);
 }
 
 h1 {
