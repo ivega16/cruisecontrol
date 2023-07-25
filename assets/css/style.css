@@ -1,0 +1,53 @@
+:root {
+    --bg-color: #C46D5E;
+    --second-bg-color: #DAA588;
+    --text-color: #9CF6F6;
+    --main-color: #F56960;
+    --secondary-color: #F3C98B;
+}
+
+header {
+    background-image: linear-gradient(to right, #C46D5E, #F56960);
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    font-weight: 600;
+    cursor: default;
+    margin-left: 2rem;
+}
+
+nav a {
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    display: inline;
+    font-weight: 1.7rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    transition: .3s;
+
+}
+
+nav a:hover, nav a:active {
+    color: var(--text-color);
+}
+
+body {
+    background-image: linear-gradient(to right, #DAA588, #F3C98B); 
+    color: var(--secondary-color);
+}
+
+section {
+    background-image: linear-gradient(to right, #C46D5E, #F56960);
+}
+
+h1 {
+    text-align: center;
+}
