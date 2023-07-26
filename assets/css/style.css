@@ -4,7 +4,8 @@
     --text-color: #F2E7CF;
     --main-color: #1C7293;
     --secondary-color:  #1C7293;
-}
+} 
+/* Added a color palette to reference using "var" */
 
 header {
     background-image: linear-gradient(to right, #21295C, #1B3B6F);
@@ -12,7 +13,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .logo {
@@ -33,7 +33,6 @@ nav a {
     margin-right: 2rem;
     transition: .3s;
     text-decoration: none;
-
 }
 
 nav a:hover, nav a:active {
