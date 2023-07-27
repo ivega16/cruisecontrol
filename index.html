@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cruise Control</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            clifford: '#da373d',
-          }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruise Control</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
         }
-      }
-    }
-  </script>
+    </script>
 </head>
+
 <body>
-    <header>
-        <h1 class="logo">Cruise Control</h1>
+    <header class="py-5">
+        <h1 class="logo font-sans subpixel-antialiased	">Cruise Control</h1>
         <nav>
             <a href="#home">Home</a>
             <a href="#itinerary">Itinerary</a>
@@ -30,21 +32,99 @@
             <a href="#gallery">Gallery</a>
         </nav>
     </header>
-  <section>
-    <h1 class="itinerary-head">Itinerary</h1>
-  </section>
-  <section>
-    <h1 class="excursions-head">Excursions</h1>
-  </section>
-  <section>
-    <h1 class="map-head">Map</h1>
-  </section>
-  <section>
-    <h1 class="weather-head">Weather</h1>
-  </section>
-  <section>
-    <h1 class="gallery-head">Gallery</h1>
-  </section>
-  <script src="./assets/js/script.js"></script>
+    <section class="py-1.5">
+        <h1 class="itinerary-head text-xl font-bold py-2.5 my-4	">Itinerary</h1>
+        <table class="table-fixed w-full mx-auto border-collapse border border-white-500">
+                <thead>
+                    <tr class="text-center">
+                        <th class="w-1/7 py-3 px-4 border-b">Date</th>
+                        <th class="w-1/7 py-3 px-4 border-b">Destination</th>
+                        <th class="w-1/7 py-3 px-4 border-b">Arrival</th>
+                        <th class="w-1/7 py-3 px-4 border-b">Gate Open</th>
+                        <th class="w-1/7 py-3 px-4 border-b">Scheduled Excursion(s)</th>
+                        <th class="w-1/7 py-3 px-4 border-b">Gate Close</th>
+                        <th class="w-1/7 py-3 px-4 border-b">Departure</th>
+                    </tr>
+                </thead>
+            <tbody>
+                <tr class="text-center">
+                    <td class="py-2">Thursday, August 3rd 2023</td>
+                    <td class="py-2">Bahamas</td>
+                    <td class="py-2">6:30 AM</td>
+                    <td class="py-2">8:00 AM</td>
+                    <td class="py-2">Excursion 1: Meet at Kiosk 6 (Start Time: 10:30 AM)</td>
+                    <td class="py-2">6:00 PM</td>
+                    <td class="py-2">7:00 PM</td>
+                </tr>
+                <tr class="text-center">
+                    <td class="py-2">Friday, August 4th 2023</td>
+                    <td class="py-2">Puerto Rico</td>
+                    <td class="py-2">7:30 AM</td>
+                    <td class="py-2">9:00 AM</td>
+                    <td class="py-2">Excursion 2: Meet at Gate (Start Time: 11:00 AM)</td>
+                    <td class="py-2">4:30 PM</td>
+                    <td class="py-2">5:00 PM</td>
+                </tr>
+                <tr class="text-center">
+                    <td class="py-2">Saturday, August 5th 2023</td>
+                    <td class="py-2">Dominican Republic</td>
+                    <td class="py-2">6:30 AM</td>
+                    <td class="py-2">8:00 AM</td>
+                    <td class="py-2">Excursion 3: Meet at Lobby (Start Time: 9:30 AM)</td>
+                    <td class="py-2">5:00 PM</td>
+                    <td class="py-2">6:00 PM</td>
+                </tr>
+                <tr class="text-center">
+                    <td class="py-2">Sunday, August 6th 2023</td>
+                    <td class="py-2">Turks & Caicos</td>
+                    <td class="py-2">5:30 AM</td>
+                    <td class="py-2">7:00 AM</td>
+                    <td class="py-2">Excursion 1: Meet at Kiosk 1 (Start Time: 8:30 AM)</td>
+                    <td class="py-2">7:00 PM</td>
+                    <td class="py-2">8:00 PM</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="py-1.5">
+        <h1 class="excursions-head text-xl font-bold py-2.5 my-4">Excursions</h1>
+        <div class="photos grid gap-4 grid-cols-4 grid-rows-2 flex justify-center">
+            <img src="./assets/images/excursions-1.avif" alt="">
+            <img src="./assets/images/excursions-2.webp" alt="">
+            <img src="./assets/images/excursions-3.jpeg" alt="">
+            <img src="./assets/images/excursions-4.jpeg" alt="">
+            <img src="./assets/images/excursions-5.png" alt="">
+            <img src="./assets/images/excursions-6.jpeg" alt="">
+            <img src="assets/images/excursions-7.jpeg" alt="">
+            <img src="./assets/images/excursions-8.jpeg" alt="">
+        </div>
+    </section>
+    <section class="py-1.5">
+        <h1 class="map-head text-xl font-bold py-2.5 my-4">Map</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque pariatur, aperiam nisi, illum ducimus est
+            atque a aliquid deleniti fuga at laudantium earum culpa eligendi consectetur! Vero neque necessitatibus qui!
+        </p>
+    </section>
+    <section class="py-1.5">
+        <h1 class="weather-head text-xl font-bold py-2.5 my-4">Weather</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque pariatur, aperiam nisi, illum ducimus est
+            atque a aliquid deleniti fuga at laudantium earum culpa eligendi consectetur! Vero neque necessitatibus qui!
+        </p>
+    </section>
+    <section class="py-1.5">
+        <h1 class="gallery-head text-xl font-bold py-2.5 my-4">Gallery</h1>
+        <div class="photos grid gap-4 grid-cols-4 grid-rows-2 flex justify-center">
+        <img src="./assets/images/cruise-1.jpeg" alt="">
+        <img src="./assets/images/cruise-2.webp" alt="">
+        <img src="./assets/images/cruise-3.jpeg" alt="">
+        <img src="./assets/images/cruise 4.jpeg" alt="">
+        <img src="./assets/images/cruise-5.webp" alt="">
+        <img src="./assets/images/cruise-6.jpeg" alt="">
+        <img src="./assets/images/cruise-7.jpeg" alt="">
+        <img src="./assets/images/cruise-8.jpeg" alt="">
+        </div>
+    </section>
+    <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

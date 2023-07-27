@@ -51,3 +51,14 @@ body {
 h1 {
     text-align: center;
 }
+
+.photos {
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+  
+  .photos img {
+    width: 375px;
+    height: 250px;
+    margin-right: 10px;
+  }
