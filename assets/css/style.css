@@ -5,7 +5,6 @@
     --main-color: #1C7293;
     --secondary-color:  #1C7293;
 } 
-/* Added a color palette to reference using "var" */
 
 header {
     background-image: linear-gradient(to right, #21295C, #1B3B6F);
