@@ -33,8 +33,8 @@
         </nav>
     </header>
     <section class="py-1.5">
-        <h1 class="itinerary-head text-xl font-bold py-2.5 my-4	">Itinerary</h1>
-        <table class="table-fixed w-full mx-auto border-collapse border border-white-500">
+        <h1 class="itinerary-head text-xl font-bold py-2.5 my-4	hide">Itinerary</h1>
+        <table class="table-fixed w-full mx-auto border-collapse border border-white-500 hide">
                 <thead>
                     <tr class="text-center">
                         <th class="w-1/7 py-3 px-4 border-b">Date</th>
@@ -45,6 +45,14 @@
                         <th class="w-1/7 py-3 px-4 border-b">Gate Close</th>
                         <th class="w-1/7 py-3 px-4 border-b">Departure</th>
                     </tr>
+                    <div class="dropdown">
+                        <button class="dropbtn">Cruising to </button>
+                        <div id="myDropdown" class="dropdown-content">
+                          <a href="#">Bahamas</a>
+                          <a href="#">Carribean</a>
+                          <a href="#">Latin America</a>
+                        </div>
+                      </div>
                 </thead>
             <tbody>
                 <tr class="text-center">
