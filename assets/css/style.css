@@ -4,8 +4,8 @@
     --text-color: #F2E7CF;
     --main-color: #1C7293;
     --secondary-color:  #1C7293;
+    scroll-behavior: smooth;
 } 
-/* Added a color palette to reference using "var" */
 
 header {
     background-image: linear-gradient(to right, #21295C, #1B3B6F);
@@ -44,7 +44,7 @@ body {
     color: var(--text-color);
 }
 
-.itinerary-head, .excursions-head, .map-head, .weather-head, .gallery-head {
+.itinerary-head, .excursions-head, .currency-head, .weather-head, .gallery-head, .review-head {
     background-image: linear-gradient(to right, #1C7293, #1B3B6F);
 }
 
@@ -122,3 +122,44 @@ h1 {
         /* color: navy; */
         border: none;
     }
+    border: var(--main-color);
+  }
+
+  .photos img:hover {
+    border: var(--text-color);
+  }
+
+  .loader {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #1C7293;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+#exchange-rates {
+    max-height: 200px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1C7293;
+}
+
+#exchange-rates li {
+    margin: 5px;
+}
