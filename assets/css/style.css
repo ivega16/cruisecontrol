@@ -44,7 +44,7 @@ body {
     color: var(--text-color);
 }
 
-.itinerary-head, .excursions-head, .currency-head, .weather-head, .gallery-head {
+.itinerary-head, .excursions-head, .currency-head, .weather-head, .gallery-head, .review-head {
     background-image: linear-gradient(to right, #1C7293, #1B3B6F);
 }
 
@@ -87,7 +87,7 @@ h1 {
     }
 }
 
-/* Custom styles for the exchange-rates section */
+
 #exchange-rates {
     max-height: 200px;
     overflow-y: auto;

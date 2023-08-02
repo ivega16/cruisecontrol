@@ -36,14 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     async function updateExchangeRates() {
-        exchangeSection.innerHTML = '<div class="loader"></div>'; // Display loading spinner
+        exchangeSection.innerHTML = '<div class="loader"></div>'; 
 
         const data = await fetchExchangeRates();
         showExchangeRates(data);
     }
 
     function getCountryName(currencyCode) {
-        // Replace this with a mapping of currency codes to country names (e.g., using an object or API)
         const countryNames = {
             USD: "USD: United States",
             EUR: "EUR: Eurozone",
@@ -102,14 +101,14 @@ document.addEventListener("DOMContentLoaded", () => {
             THB: "THB: Thailand",
             TRY: "TRY: Turkey",
             ZAR: "ZAR: South Africa",
-            // Add more currency codes and their respective country names here...
+           
         };
 
         return countryNames[currencyCode];
     }
 
-    updateExchangeRates(); // Initial update on page load
+    updateExchangeRates(); 
 
-    // Periodically update the exchange rates every 10 seconds
+  
     setInterval(updateExchangeRates, 10000);
 });
