@@ -122,6 +122,8 @@ h1 {
         /* color: navy; */
         border: none;
     }
+
+    .photos img:hover {
     border: var(--main-color);
   }
 
