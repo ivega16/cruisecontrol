@@ -22,7 +22,7 @@
 
 <body>
     <header class="py-5">
-        <h1 class="logo font-sans subpixel-antialiased	">Cruise Control</h1>
+        <h1 class="logo font-sans subpixel-antialiased">Cruise Control</h1>
         <nav>
             <a href="#home">Home</a>
             <a href="#itinerary">Itinerary</a>
@@ -33,27 +33,42 @@
         </nav>
     </header>
     <section class="py-1.5">
-        <h1 class="itinerary-head text-xl font-bold py-2.5 my-4	hide">Itinerary</h1>
-        <table class="table-fixed w-full mx-auto border-collapse border border-white-500 hide">
-                <thead>
-                    <tr class="text-center">
-                        <th class="w-1/7 py-3 px-4 border-b">Date</th>
-                        <th class="w-1/7 py-3 px-4 border-b">Destination</th>
-                        <th class="w-1/7 py-3 px-4 border-b">Arrival</th>
-                        <th class="w-1/7 py-3 px-4 border-b">Gate Open</th>
-                        <th class="w-1/7 py-3 px-4 border-b">Scheduled Excursion(s)</th>
-                        <th class="w-1/7 py-3 px-4 border-b">Gate Close</th>
-                        <th class="w-1/7 py-3 px-4 border-b">Departure</th>
-                    </tr>
-                    <div class="dropdown">
-                        <button class="dropbtn">Cruising to </button>
-                        <div id="myDropdown" class="dropdown-content">
-                          <a href="#">Bahamas</a>
-                          <a href="#">Carribean</a>
-                          <a href="#">Latin America</a>
+        <h1 id="tinerary" class="itinerary-head text-xl font-bold py-2.5 my-4	hidden">Itinerary</h1>
+        <table class="table-fixed w-full mx-auto border-collapse border border-white-500 hidden">
+            <thead class="static">
+                <tr class="text-center">
+                    <th class="w-1/7 py-3 px-4 border-b">Date</th>
+                    <th class="w-1/7 py-3 px-4 border-b">Destination</th>
+                    <th class="w-1/7 py-3 px-4 border-b">Arrival</th>
+                    <th class="w-1/7 py-3 px-4 border-b">Gate Open</th>
+                    <th class="w-1/7 py-3 px-4 border-b">Scheduled Excursion(s)</th>
+                    <th class="w-1/7 py-3 px-4 border-b">Gate Close</th>
+                    <th class="w-1/7 py-3 px-4 border-b">Departure</th>
+                </tr>
+
+                <div class=" inline-block selection-menu ">
+                    <div class="dropdown pl-20 py-8 pb-20 px-5  ">
+                        <button onclick="myFunction(this);" id="button1" class="relative dropbtn first-select px-10"><img id="icon2" class="absolute bottom-3 right-1"
+                                src="./assets/images/down-arrow.png" alt="arrow icon" width="30"
+                                height="30">Destination</button>
+                        <div id="myDropdown1" class="dropdown-content locationlist">
+                            <a id="bahamas-btn" href="#">Bahamas</a>
+                            <a id="carribean-btn" href="#">Carribean</a>
                         </div>
-                      </div>
-                </thead>
+                    </div>
+
+                    <div class="dropdown ">
+                        <button onclick="myFunction(this);" id="button2" class="relative dropbtn second-select px-10 mr-5"><img id="icon2" class="absolute bottom-3 right-1"
+                                src="./assets/images/down-arrow.png" alt="arrow icon" width="30" height="30">Event
+                            Type</button>
+                        <div id="myDropdown2" class="dropdown-content cruisetypelist">
+                            <a id="4day-btn" href="#">4-day Cruise</a>
+                        </div>
+                    </div>
+                    <button id="submit" class="static submit border-solid border-2 px-2">Get your Itinerary</button>
+                </div>
+
+            </thead>
             <tbody>
                 <tr class="text-center">
                     <td class="py-2">Thursday, August 3rd 2023</td>
@@ -95,7 +110,7 @@
         </table>
     </section>
     <section class="py-1.5">
-        <h1 class="excursions-head text-xl font-bold py-2.5 my-4">Excursions</h1>
+        <h1 id="excursions" class="excursions-head text-xl font-bold py-2.5 my-4">Excursions</h1>
         <div class="photos grid gap-4 grid-cols-4 grid-rows-2 flex justify-center">
             <img src="./assets/images/excursions-1.avif" alt="">
             <img src="./assets/images/excursions-2.webp" alt="">
@@ -108,28 +123,28 @@
         </div>
     </section>
     <section class="py-1.5">
-        <h1 class="map-head text-xl font-bold py-2.5 my-4">Map</h1>
+        <h1 id="map" class="map-head text-xl font-bold py-2.5 my-4">Map</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque pariatur, aperiam nisi, illum ducimus est
             atque a aliquid deleniti fuga at laudantium earum culpa eligendi consectetur! Vero neque necessitatibus qui!
         </p>
     </section>
     <section class="py-1.5">
-        <h1 class="weather-head text-xl font-bold py-2.5 my-4">Weather</h1>
+        <h1 id="weather" class="weather-head text-xl font-bold py-2.5 my-4">Weather</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque pariatur, aperiam nisi, illum ducimus est
             atque a aliquid deleniti fuga at laudantium earum culpa eligendi consectetur! Vero neque necessitatibus qui!
         </p>
     </section>
-    <section class="py-1.5">
+    <section id="gallery" class="py-1.5">
         <h1 class="gallery-head text-xl font-bold py-2.5 my-4">Gallery</h1>
         <div class="photos grid gap-4 grid-cols-4 grid-rows-2 flex justify-center">
-        <img src="./assets/images/cruise-1.jpeg" alt="">
-        <img src="./assets/images/cruise-2.webp" alt="">
-        <img src="./assets/images/cruise-3.jpeg" alt="">
-        <img src="./assets/images/cruise 4.jpeg" alt="">
-        <img src="./assets/images/cruise-5.webp" alt="">
-        <img src="./assets/images/cruise-6.jpeg" alt="">
-        <img src="./assets/images/cruise-7.jpeg" alt="">
-        <img src="./assets/images/cruise-8.jpeg" alt="">
+            <img src="./assets/images/cruise-1.jpeg" alt="">
+            <img src="./assets/images/cruise-2.webp" alt="">
+            <img src="./assets/images/cruise-3.jpeg" alt="">
+            <img src="./assets/images/cruise 4.jpeg" alt="">
+            <img src="./assets/images/cruise-5.webp" alt="">
+            <img src="./assets/images/cruise-6.jpeg" alt="">
+            <img src="./assets/images/cruise-7.jpeg" alt="">
+            <img src="./assets/images/cruise-8.jpeg" alt="">
         </div>
     </section>
     <script src="./assets/js/script.js"></script>
