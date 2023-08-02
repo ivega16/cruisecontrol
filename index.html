@@ -18,26 +18,23 @@
             }
         }
     </script>
-    <script>
-
-    </script>
 </head>
 
 <body>
     <header class="py-5">
-        <h1 class="logo font-sans subpixel-antialiased	">Cruise Control</h1>
+        <h1 class="logo font-sans subpixel-antialiased">Cruise Control</h1>
         <nav>
             <a href="#home">Home</a>
             <a href="#itinerary">Itinerary</a>
             <a href="#excursions">Excursions</a>
-            <a href="#map">Local Entertainment</a>
+            <a href="#currency-exchange">Currency Exchange</a>
             <a href="#weather">Weather</a>
             <a href="#gallery">Gallery</a>
         </nav>
     </header>
-    <section class="py-1.5">
-        <h1 class="itinerary-head text-xl font-bold py-2.5 my-4	">Itinerary</h1>
-        <table class="table-fixed w-full mx-auto border-collapse border border-white-500">
+    <section class="py-1.5 mx-5">
+        <h1 class="itinerary-head text-xl font-bold py-2.5 my-4">Itinerary</h1>
+        <table class="table-fixed w-full border-collapse border border-white-500">
             <thead>
                 <tr class="text-center">
                     <th class="w-1/7 py-3 px-4 border-b">Date</th>
@@ -89,70 +86,85 @@
             </tbody>
         </table>
     </section>
-    <section class="py-1.5">
+    <section class="py-1.5" id="excursions">
         <h1 class="excursions-head text-xl font-bold py-2.5 my-4">Excursions</h1>
-        <div class="photos grid gap-4 grid-cols-4 grid-rows-2 flex justify-center">
-            <img src="./assets/images/excursions-1.avif" alt="">
-            <img src="./assets/images/excursions-2.webp" alt="">
-            <img src="./assets/images/excursions-3.jpeg" alt="">
-            <img src="./assets/images/excursions-4.jpeg" alt="">
-            <img src="./assets/images/excursions-5.png" alt="">
-            <img src="./assets/images/excursions-6.jpeg" alt="">
-            <img src="assets/images/excursions-7.jpeg" alt="">
-            <img src="./assets/images/excursions-8.jpeg" alt="">
+        <div class="photos flex justify-center overflow-x-auto scroll-snap-type-x mandatory mx-5">
+
+            <img src="./assets/images/excursions-1.avif" alt="" class="scroll-snap-align start object-cover">
+            <img src="./assets/images/excursions-2.webp" alt="" class="scroll-snap-align start object-cover">
+            <img src="./assets/images/excursions-3.jpeg" alt="" class="scroll-snap-align start object-cover">
+            <img src="./assets/images/excursions-4.jpeg" alt="" class="scroll-snap-align start object-cover">
+            <img src="./assets/images/excursions-5.png" alt="" class="scroll-snap-align start object-cover">
+            <img src="./assets/images/excursions-6.jpeg" alt="" class="scroll-snap-align start object-cover">
+            <img src="assets/images/excursions-7.jpeg" alt="" class="scroll-snap-align start object-cover">
+            <img src="./assets/images/excursions-8.jpeg" alt="" class="scroll-snap-align start object-cover">
+        </div>
+        <div class="excursions-list mt-4 mx-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-cerulean-800 rounded-lg shadow-md p-4">
+                <p class="font-bold">Kayaking in the Bahamas:</p>
+                <p>
+                    Paddle through crystal-clear waters and explore hidden coves and mangrove forests. Discover the
+                    rich marine life and breathtaking coral reefs, making it a perfect adventure for nature lovers and
+                    water enthusiasts.
+                </p>
+            </div>
+    
+            <div class="bg-cerulean-800 rounded-lg shadow-md p-4">
+                <p class="font-bold">Off-roading in Dominican Republic:</p>
+                <p>
+                    Embark on an adrenaline-fueled off-road journey, driving through rugged terrains and lush tropical
+                    landscapes. Experience the authentic beauty of the Dominican Republic and witness stunning panoramic
+                    views from mountain peaks.
+                </p>
+            </div>
+    
+            <div class="bg-cerulean-800 rounded-lg shadow-md p-4">
+                <p class="font-bold">Zip-lining in Puerto Rico:</p>
+                <p>
+                    Soar above the lush rainforest canopy as you zip-line through thrilling courses. Feel the rush of
+                    adrenaline as you glide from platform to platform, enjoying breathtaking views of the surrounding
+                    landscapes.
+                </p>
+            </div>
+    
+            <div class="bg-cerulean-800 rounded-lg shadow-md p-4">
+                <p class="font-bold">Snorkeling with Stingrays in Turks and Caicos:</p>
+                <p>
+                    Dive into the crystal-clear waters of Turks and Caicos and swim alongside friendly stingrays.
+                    Experience the thrill of interacting with these majestic creatures while exploring the vibrant
+                    marine life of the Caribbean.
+                </p>
+            </div>
+    
+            <div class="bg-cerulean-800 rounded-lg shadow-md p-4">
+                <p class="font-bold">Ocean Trampoline:</p>
+                <p>
+                    Bounce and play on a floating trampoline in the middle of the ocean. Enjoy the refreshing sea
+                    breeze as you have fun with friends and family on this unique water attraction.
+                </p>
+            </div>
+    
+            <div class="bg-cerulean-800 rounded-lg shadow-md p-4">
+                <p class="font-bold">Paddle Boarding through Dominican Republic:</p>
+                <p>
+                    Glide peacefully on a paddleboard through calm waters, witnessing the beauty of the Dominican
+                    coastline. Perfect for beginners and seasoned paddlers alike, this excursion offers a serene and
+                    unforgettable experience.
+                </p>
+            </div>
         </div>
     </section>
-    <section class="py-1.5">
-        <h1 class="map-head text-xl font-bold py-2.5 my-4">Local Entertainment</h1>
-        <div id="events" class="text-center"></div>
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <script>
-            const apiKey = 'xZwUiWAX8mV2GXKlwmCQUeUJdYVY72pj';
-            const cityList = ['Miami', 'Bahamas', 'Puerto Rico', 'Dominican Republic', 'Turks and Caicos'];
-    
-            const ticketmasterDiscoveryEndpoint = 'https://app.ticketmaster.com/discovery/v2/events.json';
-    
-            function fetchData(city) {
-                const params = {
-                    apikey: apiKey,
-                    city: city,
-                };
-    
-                return axios.get(ticketmasterDiscoveryEndpoint, { params });
-            }
-    
-            // Fetch events for each city
-            Promise.all(cityList.map(city => fetchData(city)))
-                .then(responses => {
-                    const eventsDiv = document.getElementById('events');
-    
-                    responses.forEach((response, index) => {
-                        const events = response.data._embedded?.events;
-                        if (events && events.length > 0) {
-                            eventsDiv.innerHTML += `<h2>${cityList[index]}</h2>`;
-                            events.forEach(event => {
-                                const eventDiv = document.createElement('div');
-                                eventDiv.innerHTML = `
-                                    <h3>${event.name}</h3>
-                                    <p>Venue: ${event._embedded.venues[0].name}</p>
-                                    <p>Date: ${event.dates.start.localDate}</p>
-                                    <p>Time: ${event.dates.start.localTime}</p>
-                                    <hr>
-                                `;
-                                eventsDiv.appendChild(eventDiv);
-                            });
-                        }
-                    });
-    
-                    if (eventsDiv.innerHTML === '') {
-                        eventsDiv.innerHTML = '<p>No events found in the specified locations.</p>';
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error.message);
-                });
-        </script>
+    <section class="py-1.5 overflow-auto" id="currency-exchange">
+        <h1 class="currency-head text-xl font-bold py-2.5 my-4">Currency Exchange</h1>
+        <!-- <div class="search-container flex justify-center items-center mb-4">
+            <input type="text" id="search-input" placeholder="Search by country...">
+            <button id="search-button" class="ml-2 px-4 py-2 bg-blue-500 text-white font-semibold rounded-md">
+                Search
+            </button>
+        </div> -->
+        <ul class="flex flex-col items-center mt-3" id="exchange-rates">
+            <!-- Exchange rate data will be dynamically added here -->
+        </ul>
     </section>
     <section class="py-1.5">
         <h1 class="weather-head text-xl font-bold py-2.5 my-4">Weather</h1>
@@ -162,17 +174,72 @@
     </section>
     <section class="py-1.5">
         <h1 class="gallery-head text-xl font-bold py-2.5 my-4">Gallery</h1>
-        <div class="photos grid gap-4 grid-cols-4 grid-rows-2 flex justify-center">
-            <img src="./assets/images/cruise-1.jpeg" alt="">
-            <img src="./assets/images/cruise-2.webp" alt="">
-            <img src="./assets/images/cruise-3.jpeg" alt="">
-            <img src="./assets/images/cruise 4.jpeg" alt="">
-            <img src="./assets/images/cruise-5.webp" alt="">
-            <img src="./assets/images/cruise-6.jpeg" alt="">
-            <img src="./assets/images/cruise-7.jpeg" alt="">
-            <img src="./assets/images/cruise-8.jpeg" alt="">
+        <div class="photos flex justify-center overflow-x-auto scroll-snap-type-x mandatory mx-5">
+            <img src="./assets/images/cruise-1.jpeg" alt="" class="scroll-snap-align start">
+            <img src="./assets/images/cruise-2.webp" alt="" class="scroll-snap-align start">
+            <img src="./assets/images/cruise-3.jpeg" alt="" class="scroll-snap-align start">
+            <img src="./assets/images/cruise-4.jpeg" alt="" class="scroll-snap-align start">
+            <img src="./assets/images/cruise-5.webp" alt="" class="scroll-snap-align start">
+            <img src="./assets/images/cruise-6.jpeg" alt="" class="scroll-snap-align start">
+            <img src="./assets/images/cruise-7.jpeg" alt="" class="scroll-snap-align start">
+            <img src="./assets/images/cruise-8.jpeg" alt="" class="scroll-snap-align start">
+        </div>
+        <h1 class="text-xl font-bold py-4 my-4 text-center">User Reviews</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+            <div class="bg-cerulean-800 rounded-lg shadow-md p-4">
+                <p class="font-bold">Review by JaneDoe87:</p>
+                <p>Cruise Control made planning my dream cruise a breeze! The beautiful design and user-friendly
+                    interface allowed me to easily explore various destinations and excursions. The dynamic events
+                    search feature kept me updated on local entertainment options. I highly recommend Cruise Control
+                    to all cruise enthusiasts!</p>
+            </div>
+
+
+            <div class="bg-cerulean-800 rounded-lg shadow-md p-4">
+                <p class="font-bold">Review by SailingSam:</p>
+                <p>I stumbled upon Cruise Control while planning my vacation, and I'm thrilled I did! The itinerary
+                    section helped me keep track of all the exciting destinations and activities. The stunning
+                    gallery left me in awe, giving me a sneak peek into what my cruise experience will be like.
+                    Fantastic website!</p>
+            </div>
+
+            <div class="bg-cerulean-800 rounded-lg shadow-md p-4">
+                <p class="font-bold">Review by TravelBug123:</p>
+                <p>Cruise Control is the ultimate one-stop-shop for cruise information. The wave logo next to the
+                    name adds a lovely touch of elegance. The weather forecast was a helpful addition to my itinerary
+                    planning. Kudos to the team for creating such a dynamic and professional website!</p>
+            </div>
+
+
+            <div class="bg-cerulean-800 rounded-lg shadow-md p-4">
+                <p class="font-bold">Review by AdventureSeeker69:</p>
+                <p>Cruise Control is a game-changer for cruise travelers like me! The tailored excursions section
+                    offered a wide range of thrilling options to suit every taste. The local entertainment search
+                    feature was my favorite, allowing me to discover exciting events at each destination. I can't
+                    wait to set sail!</p>
+            </div>
+
+
+            <div class="bg-cerulean-800 rounded-lg shadow-md p-4">
+                <p class="font-bold">Review by SeaBreeze21:</p>
+                <p>Cruise Control is a hidden gem in the world of cruise planning. The site's simplicity and
+                    aesthetic appeal make it a joy to use. I loved how the images in the gallery were uniformly
+                    displayed, giving a perfect view of the cruise destinations. This website is a must-have for
+                    anyone looking to embark on an unforgettable cruise adventure!</p>
+            </div>
+            <div class="bg-cerulean-800 rounded-lg shadow-md p-4">
+                <p class="font-bold">Review by HappyVoyager:</p>
+                <p>Cruise Control is fantastic! It offers an excellent collection of exciting excursions, and the
+                    local entertainment search is a game-changer. The weather section helped me plan my outfits
+                    accordingly. The reviews by other users were invaluable in making my decision. Highly recommend
+                    this user-friendly website!</p>
+            </div>
+        </div>
         </div>
     </section>
+    
+    
     <script src="./assets/js/script.js"></script>
 </body>
 
