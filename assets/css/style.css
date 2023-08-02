@@ -160,4 +160,10 @@ h1 {
     top: 0;
     left: 20px;
   }
+
+  #googleMap {
+    width: 60%;
+    height: 400px;
+    margin: 20px auto;
+  }
   

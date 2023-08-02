@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cruise Control</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
     <script>
         tailwind.config = {
             theme: {
@@ -156,7 +157,7 @@
     </section>
     <!-----------------------Weather section---------------------------->
     <section class="py-1.5">
-        <h1 class="weather-head text-xl font-bold py-2.5 my-4">Weather</h1>
+        <h1 class="weather-head text-xl font-bold py-2.5 my-4">Weather & Maps</h1>
         <div class="card">
             <div class="search">
                 <input type="text" class="search-bar" placeholder="Search">
@@ -179,63 +180,47 @@
             </div>
         </div>
         <br>
-        <!-----------------------5day forecast---------------------------->
-        <div id="fiveday-forecast" class=" grid grid-cols-5 gap-4">
+        <!---------------------------Google Maps------------------------>
+        <div class="jumbotron">
+            <div class="contanier-fluid">
+                <p>Locate a port or calculate your driving distance</p>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="from" class="col-xs-2 control label"><i class="fas fa-dot-circle"></i></label>
+                        <div class="col-xs-4">
+                            <input type="text" id="from" placeholder="origin" class="from-control">
 
-            <div class=" card-fiveday">
-                <div class=" card-body">
-                    <h6 id="card-title1">7/25/2023</h6>
-                    <img id="icon1" class="img-fluid" src="https://openweathermap.org/img/wn/01d@2x.png" alt="">
-                    <p id="temp1">Temp: 70.6F</p>
-                    <p id="wind1">8.43 MPH</p>
-                    <p id="humidity1">44%</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="to" class="col-xs-2 control label"><i class="fa fa-map-marker" aria-hidden="true"></i></label>
+                        <div class="col-xs-4">
+                            <input type="text" id="to" placeholder="Destination" class="form-control">
+
+                        </div>
+                    </div>
+
+                    
+                </form>
+                <div class="col-xs-offset-2 col-xs-10">
+                    <button class="btn btn-info btn-lg"><i class="fas fa-directions"></i></button>
+
+                </div>
+
+            </div>
+            <div class="container-fluid">
+                <div id="googleMap">
+                    <div id="output">
+
+                    </div>
                 </div>
             </div>
-
-            <div class="card-fiveday">
-                <div class="card-body">
-                    <h6 id="card-title2">7/25/2023</h6>
-                    <img id="icon2" class="img-fluid" src="https://openweathermap.org/img/wn/01d@2x.png" alt="">
-                    <p id="temp2">Temp: 70.6F</p>
-                    <p id="wind2">8.43 MPH</p>
-                    <p id="humidity2">44%</p>
-                </div>
-            </div>
-
-            <div class=" card-fiveday">
-                <div class="card-body">
-                    <h6 id="card-title3">7/25/2023</h6>
-                    <img id="icon3" class="img-fluid" src="https://openweathermap.org/img/wn/01d@2x.png" alt="">
-                    <p id="temp3">Temp: 70.6F</p>
-                    <p id="wind3">8.43 MPH</p>
-                    <p id="humidity3">44%</p>
-                </div>
-            </div>
-
-            <div class=" card-fiveday">
-                <div class=" card-body">
-                    <h6 id="card-title4">7/25/2023</h6>
-                    <img id="icon4" class="img-fluid" src="https://openweathermap.org/img/wn/01d@2x.png" alt="">
-                    <p id="temp4">Temp: 70.6F</p>
-                    <p id="wind4">8.43 MPH</p>
-                    <p id="humidity4">44%</p>
-                </div>
-            </div>
-
-            <div class=" card-fiveday">
-                <div class=" card-body">
-                    <h6 id="card-title5">7/25/2023</h6>
-                    <img id="icon5" class="img-fluid" src="https://openweathermap.org/img/wn/01d@2x.png" alt="">
-                    <p id="temp5">Temp: 70.6F</p>
-                    <p id="wind5">8.43 MPH</p>
-                    <p id="humidity5">52%</p>
-                </div>
-            </div>
-
-
+        </div>
         </div>
 
     </section>
+    <!------------------------------------------------------------------>
     <section class="py-1.5">
         <h1 class="gallery-head text-xl font-bold py-2.5 my-4">Gallery</h1>
         <div class="photos grid gap-4 grid-cols-4 grid-rows-2 flex justify-center">
@@ -249,6 +234,8 @@
             <img src="./assets/images/cruise-8.jpeg" alt="">
         </div>
     </section>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAF0FAnNK2ASkoCK-6zxMo7gNySMUFQVnQ&libraries=places"></script>
+    <script src="https://kit.fontawesome.com/ab2155e76b.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.9/dayjs.min.js"
         integrity="sha512-q4Xn+ZU2K+dqJPL8a3TiyGsDa31IkR/rLt/w+fy8jLrx8TdXj0dLM1Aq4aPXnOOKxHEya/bD9DePDB2DHm4jJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>

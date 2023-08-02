@@ -1,9 +1,59 @@
-// weather api //
-var titleEl = document.getElementById("title")
-var tempEl = document.getElementById("temp")
-var windEl = document.getElementById("wind")
-var humidityEl = document.getElementById("humidity")
-var fivedayForecast = document.getElementById("fiveday-forecast")
+// set map option //
+
+var mylatlng = { lat: 25.778135, lng:  -80.179100};
+var mapOptions = {
+  center: mylatlng,
+  zoom: 7,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+// create map //
+
+var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+
+// create directions service object to use the route method and get a result for the request//
+var directionsService = new google.maps.DirectionsService();
+// create a direction RENDER object which will display the route //
+var directionsDisplay = new google.maps.DirectionsRenderer();
+// bind  the directionsRENDER to the map//
+directionsDisplay.setMap(map);
+
+function calcRoute(){
+  var request = {
+    origin: document.getElementById("from").value,
+    destination: document.getElementById("to").value,
+    travelMode: google.maps.TravelMode.DRIVING,  // can add or change for walking, bike and transit
+    unitSystem: google.maps.UnitSystem.IMPERIAL
+
+  }
+
+// pass request to route method, get distance and time //
+directionsService.route(request, (result, status) => {
+  if(status == google.maps.DirectionsStatus.OK) {
+    
+    const output = document.querySelector("#output");
+    output.innerHTML = "<div class='alert-info'> from " + document.getElementById("from").value + ". <br />To: " + document.getElementById("to").value + ". <br /> Driving distance <i class='fa-regular fa-map'></i> :" + result.routes[0].legs[0].distance.text + ".<br />Duration <i class='fa-solid fa-hourglass-half'></i> :" + result.routes[0].legs[0].duration.text + ".</div>";
+    // display route and delete//
+    directionsDisplay.setDirections(result);
+  } else {
+    directionsDisplay.setDirections({ routes: []});
+   
+    map.setCenter(mylatlng); // center map in miami port //
+
+   // output.innerHTML = "<div class='alert-danger><i class='fa-thin fa-circle-exclamation'></i> Driving distance not possible. </div>";                         // error message if driving not possible //
+  }
+});
+}
+// auto complete function for input //
+//var options = {
+ // types: ['(cities']
+//}
+
+//var input1 = document.getElementById("from");
+//var autocomplete1 = new google.maps.places.Autocomplete(input1, options)
+
+//var input2 = document.getElementById("to");
+//var autocomplete2 = new google.maps.places.Autocomplete(input2, options)
+// Weather Api //
 let weather = {
     apiKey: "7e68cdfa71c2c8c17187eb95320793b0",
     fetchWeather: function (city) {
@@ -82,4 +132,4 @@ function dropMenuOptions() {
   }
 
 
-  dropBtnEl.addEventListener("click", dropMenuOptions)
+ // dropBtnEl.addEventListener("click", dropMenuOptions)
