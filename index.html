@@ -33,10 +33,10 @@
             <a href="#gallery">Gallery</a>
         </nav>
     </header>
-    <section class="py-1.5 mx-5">
-        <h1 class="itinerary-head text-xl font-bold py-2.5 my-4">Itinerary</h1>
-        <table class="table-fixed w-full border-collapse border border-white-500">
-            <thead>
+    <section class="py-1.5">
+        <h1 id="tinerary" class="itinerary-head text-xl font-bold py-2.5 my-4	hidden">Itinerary</h1>
+        <table class="table-fixed w-full mx-auto border-collapse border border-white-500 hidden">
+            <thead class="static">
                 <tr class="text-center">
                     <th class="w-1/7 py-3 px-4 border-b">Date</th>
                     <th class="w-1/7 py-3 px-4 border-b">Destination</th>
@@ -46,6 +46,29 @@
                     <th class="w-1/7 py-3 px-4 border-b">Gate Close</th>
                     <th class="w-1/7 py-3 px-4 border-b">Departure</th>
                 </tr>
+
+                <div class=" inline-block selection-menu ">
+                    <div class="dropdown pl-20 py-8 pb-20 px-5  ">
+                        <button onclick="myFunction(this);" id="button1" class="relative dropbtn first-select px-10"><img id="icon2" class="absolute bottom-3 right-1"
+                                src="./assets/images/down-arrow.png" alt="arrow icon" width="30"
+                                height="30">Destination</button>
+                        <div id="myDropdown1" class="dropdown-content locationlist">
+                            <a id="bahamas-btn" href="#">Bahamas</a>
+                            <a id="carribean-btn" href="#">Carribean</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown ">
+                        <button onclick="myFunction(this);" id="button2" class="relative dropbtn second-select px-10 mr-5"><img id="icon2" class="absolute bottom-3 right-1"
+                                src="./assets/images/down-arrow.png" alt="arrow icon" width="30" height="30">Event
+                            Type</button>
+                        <div id="myDropdown2" class="dropdown-content cruisetypelist">
+                            <a id="4day-btn" href="#">4-day Cruise</a>
+                        </div>
+                    </div>
+                    <button id="submit" class="static submit border-solid border-2 px-2">Get your Itinerary</button>
+                </div>
+
             </thead>
             <tbody>
                 <tr class="text-center">

@@ -4,6 +4,130 @@
     --text-color: #F2E7CF;
     --main-color: #1C7293;
     --secondary-color:  #1C7293;
+} 
+/* Added a color palette to reference using "var" */
+
+header {
+    background-image: linear-gradient(to right, #21295C, #1B3B6F);
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    font-weight: 600;
+    cursor: default;
+    margin-left: 2rem;
+}
+
+nav a {
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    display: inline;
+    font-weight: 1.7rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    transition: .3s;
+    text-decoration: none;
+}
+
+nav a:hover, nav a:active {
+    color: var(--text-color);
+}
+
+body {
+    background-image: linear-gradient(to right, #1B3B6F, #1C7293); 
+    color: var(--text-color);
+}
+
+.itinerary-head, .excursions-head, .map-head, .weather-head, .gallery-head {
+    background-image: linear-gradient(to right, #1C7293, #1B3B6F);
+}
+
+h1 {
+    text-align: center;
+}
+
+
+.photos {
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+  
+  .photos img {
+    width: 375px;
+    height: 250px;
+    margin-right: 10px;
+  }
+
+  .submit {
+    border-color: #ff8309;
+    background: #ff8309;
+  }
+
+  /* Dropdown Button */
+.dropbtn {
+    background-color: #118cdd;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 161px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {
+    display:block;
+}
+    #submit:hover{
+        background-color: hsl(30, 100%, 40%);
+        /* color: navy; */
+        border: none;
+    }
+:root {
+    --bg-color: #21295C;
+    --second-bg-color: #1B3B6F;
+    --text-color: #F2E7CF;
+    --main-color: #1C7293;
+    --secondary-color:  #1C7293;
     scroll-behavior: smooth;
 } 
 
@@ -102,7 +226,7 @@ h1 {
 #exchange-rates li {
     margin: 5px;
 }
-  }
+  
 
   .card {
     background: linear-gradient(to right, #21295C, #1B3B6F);
