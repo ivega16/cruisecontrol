@@ -6,6 +6,12 @@ var dropdownList1 = document.getElementById("myDropdown1") //dropdown for button
 var dropdownList2 = document.getElementById("myDropdown2") //dropdown for button 2
 var button1 = document.getElementById("button1") //button 1
 var button2 = document.getElementById("button2") //button 2
+var arrowIcon1 = document.getElementById("icon1") //first icon on button 1
+var arrowIcon2 = document.getElementById("icon2") //second icon on button 2
+var submitBtn = document.getElementById("submit") //submitt btn 
+var itineraryHeader = document.getElementById("itinerary") //itinerary header
+var itineraryTable = document.getElementById("itinerary-table") //itinerary table
+
 
 //if active button is clicked, 
 //then replace button text to dropdown list item
@@ -19,12 +25,13 @@ var button2 = document.getElementById("button2") //button 2
 function myFunction(element) {
     
     // element.nextSibling is the carriage return… The dropdown menu is the next next.
+    debugger
     var thisDropdown = element.nextSibling.nextSibling;
     
     if (!thisDropdown.classList.contains('show')) {  // Added to hide dropdown if clicking on the one already open
       var i;
       for (i = 0; i < dropdowns.length; i++) {
-        dropdowns[i].classList.remove('show');
+        dropdowns[i].classList.remove('show'); //shows dropdown list
       }
     }
     
@@ -44,6 +51,42 @@ function myFunction(element) {
         }
       }
     }
+
+dropdownList1.addEventListener("click", (e)=> {
+    debugger
+    if (e.target === bahamasLI) {
+        // arrowIcon1.style.transform = 'rotate(180deg)'
+        button1.innerText = bahamasLI.textContent
+        // button1.textContent = bahamasLI.innerHTML
+        button1.classList.add("active")
+        // button1.textContent+=reverseIcon1
+    } else if (e.target === carribeanLI) {
+        button1.textContent = carribeanLI.innerHTML
+        button1.classList.add("active")
+    }
+})
+
+dropdownList2.addEventListener("click", (e)=> {
+    debugger
+    if(e.target === cruisedaysLI) {
+        button2.textContent = cruisedaysLI.innerHTML 
+        button2.classList.add("active")
+    }
+} )
+
+function SubmitFun() {
+    debugger
+    if(button1.classList.contains("active") && button2.classList.contains("active")) {
+        if(button1.textContent = "Bahamas") {
+            itineraryHeader.classList.remove("hidden")
+            itineraryTable.classList.remove("hidden")
+        }
+    }
+
+}
+
+submitBtn.addEventListener("click", SubmitFun)
+    
         
 // set map option //
 
@@ -275,4 +318,4 @@ document.addEventListener("DOMContentLoaded", () => {
   
     setInterval(updateExchangeRates, 10000);
 });
- // dropBtnEl.addEventListener("click", dropMenuOptions)
+
