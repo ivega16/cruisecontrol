@@ -359,4 +359,58 @@ document.addEventListener("DOMContentLoaded", () => {
   
     setInterval(updateExchangeRates, 10000);
 });
+<<<<<<< HEAD
+=======
+ // dropBtnEl.addEventListener("click", dropMenuOptions)
+
+ // Function to handle adding an excursion to the cart
+function addToCart(excursion) {
+    // Get the existing cart items from local storage or initialize an empty array
+    let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Add the selected excursion to the cart
+    cartItems.push(excursion);
+
+    // Save the updated cart items to local storage
+    localStorage.setItem("cart", JSON.stringify(cartItems));
+}
+
+// Function to handle rendering the cart items
+function renderCartItems() {
+    // Get the cart items from local storage
+    let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Get the cart section element to display the cart items
+    let cartSection = document.getElementById("cart-section");
+
+    // Clear the existing content
+    cartSection.innerHTML = "";
+
+    // Display the cart items
+    for (let i = 0; i < cartItems.length; i++) {
+        let cartItem = cartItems[i];
+
+        // Create a new element to display the cart item
+        let cartItemElement = document.createElement("div");
+        cartItemElement.classList.add("cart-item");
+        cartItemElement.textContent = cartItem;
+
+        // Add the cart item element to the cart section
+        cartSection.appendChild(cartItemElement);
+    }
+}
+
+// Event listener for the "Add to Cart" buttons
+const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
+addToCartButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        let excursionTitle = button.parentNode.querySelector(".excursion-title").textContent;
+        addToCart(excursionTitle);
+        renderCartItems();
+    });
+});
+
+// Call renderCartItems to display any existing cart items when the page loads
+renderCartItems();
+>>>>>>> 5f3f83d63218561d74008aec49ed3e7541688821
 
