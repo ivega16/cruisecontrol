@@ -69,4 +69,3 @@ We are open to contributions and suggestions to make Cruise Control even better!
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-Feel free to customize this README file with specific details about your Cruise Control website, such as installation instructions, API usage, or additional features. A well-written README will help users understand your project and get started quickly. Good luck with your Cruise Control website!

@@ -243,12 +243,11 @@ h1 {
     max-width: 420px;
     margin: auto;
   }
+  
   .card-fiveday {
     background: linear-gradient(to right, #21295C, #1B3B6F);
     color: white;
     border-radius: 30px;
-
-
   }
 
   .card-body {
@@ -273,8 +272,9 @@ h1 {
     color: white;
     cursor: pointer;
     transition: 0.2s ease-in-out;
-  } */
-  
+  }
+   */
+   
   .search-bar {
     border: none;
     outline: none;
@@ -287,9 +287,9 @@ h1 {
     width: calc(100% - 100px);
   }
   
-  /* button:hover {
+  button:hover {
     background: #7c7c7c6b;
-  } */
+  }
   
   .temp {
     margin: 0;
@@ -297,7 +297,7 @@ h1 {
     align-items: center;
   }
 
-  /* .city, .humidity, .wind {
+  .city, .humidity, .wind {
     align-items: center;
     text-align: center;
   }
@@ -305,7 +305,7 @@ h1 {
   .flex {
     display: flex;
     align-items: center;
-  } */
+  }
   
   
   .description {
@@ -333,14 +333,17 @@ h1 {
     left: 20px;
   }
 
-  /* #googleMap {
+  #googleMap {
     width: 75%;
     height: 350px;
-  } */
+  }
 
 
 #button-maps {
   color:rgb(23, 21, 153) ;
+  display: flex;
+  justify-content: center!important;
+  align-items: center!important;
 }
 
   
