@@ -87,7 +87,9 @@ h1 {
         transform: rotate(360deg);
     }
 }
-
+.search-bar {
+    color: black;
+}
 
 #exchange-rates {
     max-height: 200px;
