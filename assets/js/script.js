@@ -1,5 +1,5 @@
 var dropdowns = document.getElementsByClassName("dropdown-content"); //dropdown options for both buttons
-var bahamasLI = document.getElementById("bahamas-btn") //bahamas dropdown option on button 1
+var westernLI = document.getElementById("westerncarribean-btn") //bahamas dropdown option on button 1
 var carribeanLI = document.getElementById("carribean-btn") //carribean dropdown option on button1
 var cruisedaysLI = document.getElementById("4day-btn") //4-day cruise dropdown option on button2
 var dropdownList1 = document.getElementById("myDropdown1") //dropdown for button 1
@@ -11,6 +11,17 @@ var arrowIcon2 = document.getElementById("icon2") //second icon on button 2
 var submitBtn = document.getElementById("submit") //submitt btn 
 var itineraryHeader = document.getElementById("itinerary") //itinerary header
 var itineraryTable = document.getElementById("itinerary-table") //itinerary table
+var itineraryLocation1 = document.querySelector(".itinerary-location0")
+var itineraryLocation2 = document.querySelector(".itinerary-location1")
+var itineraryLocation3 = document.querySelector(".itinerary-location2")
+var itineraryLocation4 = document.querySelector(".itinerary-location3")
+var cruiseday1 = document.querySelector(".date-1")
+var cruiseday2 = document.querySelector(".date-2")
+var cruiseday3 = document.querySelector(".date-3")
+var cruiseday4 = document.querySelector(".date-4")
+
+
+
 
 
 //if active button is clicked, 
@@ -23,9 +34,20 @@ var itineraryTable = document.getElementById("itinerary-table") //itinerary tabl
 
 
 function myFunction(element) {
-    
-    // element.nextSibling is the carriage return… The dropdown menu is the next next.
     debugger
+    // element.nextSibling is the carriage return… The dropdown menu is the next next.
+    if(button1.classList.contains("active")&& button2.classList.contains("active")){
+        itineraryHeader.classList.add("hidden")
+        itineraryTable.classList.add("hidden")
+        button1.textContent = "Destination" 
+        button2.textContent = "Event Type"
+        button1.classList.remove("active")
+        button2.classList.remove("active")
+   
+    }
+    // itineraryHeader.classList.add("hidden")
+    // itineraryTable.classList.add("hidden")
+    
     var thisDropdown = element.nextSibling.nextSibling;
     
     if (!thisDropdown.classList.contains('show')) {  // Added to hide dropdown if clicking on the one already open
@@ -37,7 +59,9 @@ function myFunction(element) {
     
     // Toggle the dropdown on the element clicked
     thisDropdown.classList.toggle("show");
-  }
+
+    }
+  
   
   /* function to close the dropdown when clicked outside. */
   window.onclick = function(event) {
@@ -53,10 +77,11 @@ function myFunction(element) {
     }
 
 dropdownList1.addEventListener("click", (e)=> {
-    debugger
-    if (e.target === bahamasLI) {
+
+    if (e.target === westernLI) {
         // arrowIcon1.style.transform = 'rotate(180deg)'
-        button1.innerText = bahamasLI.textContent
+        button1.innerText = westernLI.textContent 
+        // bahamasLI.innerHTML = bahamasLI.textContent
         // button1.textContent = bahamasLI.innerHTML
         button1.classList.add("active")
         // button1.textContent+=reverseIcon1
@@ -67,7 +92,7 @@ dropdownList1.addEventListener("click", (e)=> {
 })
 
 dropdownList2.addEventListener("click", (e)=> {
-    debugger
+ 
     if(e.target === cruisedaysLI) {
         button2.textContent = cruisedaysLI.innerHTML 
         button2.classList.add("active")
@@ -75,15 +100,26 @@ dropdownList2.addEventListener("click", (e)=> {
 } )
 
 function SubmitFun() {
-    debugger
     if(button1.classList.contains("active") && button2.classList.contains("active")) {
-        if(button1.textContent = "Bahamas") {
+        if(button1.textContent === "Southern Carribean") {
             itineraryHeader.classList.remove("hidden")
             itineraryTable.classList.remove("hidden")
+        } else if(button1.textContent === "Western Carribean") {
+                itineraryLocation1.textContent = "Mexico"
+                itineraryLocation2.textContent = "Honduras"
+                itineraryLocation3.textContent = "Costa Rica"
+                itineraryLocation4.textContent = "Bahamas"
+                itineraryHeader.classList.remove("hidden")
+                itineraryTable.classList.remove("hidden")
+                cruiseday1.textContent = "Friday, Sep. 1st 2023"
+                cruiseday2.textContent = "Saturday, Sep. 2nd 2023"
+                cruiseday3.textContent = "Sunday, Sep. 3rd 2023"
+                cruiseday4.textContent = "Monday, Sep. 4th 2023"
+                }
+            }
         }
-    }
 
-}
+
 
 submitBtn.addEventListener("click", SubmitFun)
     
