@@ -22,8 +22,6 @@ var cruiseday4 = document.querySelector(".date-4")
 
 
 
-
-
 //if active button is clicked, 
 //then replace button text to dropdown list item
 
@@ -45,8 +43,6 @@ function myFunction(element) {
         button2.classList.remove("active")
    
     }
-    // itineraryHeader.classList.add("hidden")
-    // itineraryTable.classList.add("hidden")
     
     var thisDropdown = element.nextSibling.nextSibling;
     
@@ -81,10 +77,9 @@ dropdownList1.addEventListener("click", (e)=> {
     if (e.target === westernLI) {
         // arrowIcon1.style.transform = 'rotate(180deg)'
         button1.innerText = westernLI.textContent 
-        // bahamasLI.innerHTML = bahamasLI.textContent
-        // button1.textContent = bahamasLI.innerHTML
+
         button1.classList.add("active")
-        // button1.textContent+=reverseIcon1
+
     } else if (e.target === carribeanLI) {
         button1.textContent = carribeanLI.innerHTML
         button1.classList.add("active")
@@ -119,10 +114,9 @@ function SubmitFun() {
             }
         }
 
-
-
 submitBtn.addEventListener("click", SubmitFun)
     
+
         
 // set map option //
 
