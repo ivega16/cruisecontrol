@@ -338,7 +338,7 @@ h1 {
     justify-content: center;
   }
   
-  button {
+  #button-weather {
     margin: 0.5em;
     border-radius: 50%;
     border: none;
@@ -363,7 +363,7 @@ h1 {
     width: calc(100% - 100px);
   }
   
-  button:hover {
+  #button-weather:hover {
     background: #7c7c7c6b;
   }
   
@@ -410,10 +410,13 @@ h1 {
   }
 
   #googleMap {
-    width: 60%;
-    height: 400px;
-    margin: 20px auto;
+    width: 75%;
+    height: 350px;
   }
+#button-maps {
+  color:rgb(23, 21, 153) ;
+}
+
   
   .excursions-grid {
     justify-items: center;
