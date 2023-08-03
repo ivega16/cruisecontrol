@@ -271,3 +271,38 @@ h1 {
     margin: 20px auto;
   }
   
+@media only screen and (device-width: 414px) and (device-height:896px) and (-webkit-device-pixel-ratio: 2) {
+    .dropdown {
+        padding: 4% 3% 4% 4% !important
+    }
+    .submit {
+        margin: 0% 0% 0% 29% !important;
+    }
+}
+@media only screen and (device-width: 425px) and (device-height:681px) and (-webkit-device-pixel-ratio: 2) {
+    .dropdown {
+        padding: 4% 3% 4% 4% !important
+    }
+    .submit {
+        margin: 0% 0% 0% 29% !important;
+    }
+
+}
+@media only screen and (device-width: 375px) and (device-height:681px) and (-webkit-device-pixel-ratio: 2) {
+    .dropdown {
+        padding: 4% 3% 4% 4% !important
+    }
+    .submit {
+        margin: 0% 0% 0% 5% !important;
+    }
+
+}
+@media only screen and (device-width: 320px) and (device-height:681px) and (-webkit-device-pixel-ratio: 2) {
+    .dropdown {
+        padding: 4% 3% 4% 4% !important
+    }
+    .submit {
+        margin: 0% 0% 0% 5% !important;
+    }
+   
+}

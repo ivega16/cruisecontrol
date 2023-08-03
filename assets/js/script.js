@@ -32,13 +32,17 @@ var cruiseday4 = document.querySelector(".date-4")
 
 
 function myFunction(element) {
-    debugger
+
     // element.nextSibling is the carriage return… The dropdown menu is the next next.
     if(button1.classList.contains("active")&& button2.classList.contains("active")){
         itineraryHeader.classList.add("hidden")
         itineraryTable.classList.add("hidden")
-        button1.textContent = "Destination" 
-        button2.textContent = "Event Type"
+        button1.innerHTML = `<img id="icon1" class="flip-card absolute bottom-3 right-1"
+        src="./assets/images/down-arrow.png" alt="arrow icon" width="30"
+        height="30"> Destination`
+        button2.innerHTML = `<img id="icon1" class="flip-card absolute bottom-3 right-1"
+        src="./assets/images/down-arrow.png" alt="arrow icon" width="30"
+        height="30"> Event Type`
         button1.classList.remove("active")
         button2.classList.remove("active")
    
@@ -76,12 +80,17 @@ dropdownList1.addEventListener("click", (e)=> {
 
     if (e.target === westernLI) {
         // arrowIcon1.style.transform = 'rotate(180deg)'
-        button1.innerText = westernLI.textContent 
-
+        button1.innerHTML = `<img id="icon1" class="flip-card absolute bottom-3 right-1"
+        src="./assets/images/down-arrow.png" alt="arrow icon" width="30"
+        height="30"> ${westernLI.textContent}`
+        
         button1.classList.add("active")
 
     } else if (e.target === carribeanLI) {
-        button1.textContent = carribeanLI.innerHTML
+        button1.innerHTML = `<img id="icon1" class="flip-card absolute bottom-3 right-1"
+        src="./assets/images/down-arrow.png" alt="arrow icon" width="30"
+        height="30"> ${carribeanLI.textContent}`
+        
         button1.classList.add("active")
     }
 })
@@ -89,17 +98,19 @@ dropdownList1.addEventListener("click", (e)=> {
 dropdownList2.addEventListener("click", (e)=> {
  
     if(e.target === cruisedaysLI) {
-        button2.textContent = cruisedaysLI.innerHTML 
+        button2.innerHTML = `<img id="icon1" class="flip-card absolute bottom-3 right-1"
+        src="./assets/images/down-arrow.png" alt="arrow icon" width="30"
+        height="30"> ${cruisedaysLI.textContent }`
         button2.classList.add("active")
     }
 } )
 
 function SubmitFun() {
     if(button1.classList.contains("active") && button2.classList.contains("active")) {
-        if(button1.textContent === "Southern Carribean") {
+        if(button1.textContent.includes("Southern Carribean")) {
             itineraryHeader.classList.remove("hidden")
             itineraryTable.classList.remove("hidden")
-        } else if(button1.textContent === "Western Carribean") {
+        } else if(button1.textContent.includes("Western Carribean")) {
                 itineraryLocation1.textContent = "Mexico"
                 itineraryLocation2.textContent = "Honduras"
                 itineraryLocation3.textContent = "Costa Rica"
