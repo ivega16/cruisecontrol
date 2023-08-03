@@ -1,11 +1,26 @@
 var dropdowns = document.getElementsByClassName("dropdown-content"); //dropdown options for both buttons
-var bahamasLI = document.getElementById("bahamas-btn") //bahamas dropdown option on button 1
+var westernLI = document.getElementById("westerncarribean-btn") //bahamas dropdown option on button 1
 var carribeanLI = document.getElementById("carribean-btn") //carribean dropdown option on button1
 var cruisedaysLI = document.getElementById("4day-btn") //4-day cruise dropdown option on button2
 var dropdownList1 = document.getElementById("myDropdown1") //dropdown for button 1
 var dropdownList2 = document.getElementById("myDropdown2") //dropdown for button 2
 var button1 = document.getElementById("button1") //button 1
 var button2 = document.getElementById("button2") //button 2
+var arrowIcon1 = document.getElementById("icon1") //first icon on button 1
+var arrowIcon2 = document.getElementById("icon2") //second icon on button 2
+var submitBtn = document.getElementById("submit") //submit btn 
+var itineraryHeader = document.getElementById("itinerary") //itinerary header
+var itineraryTable = document.getElementById("itinerary-table") //itinerary table
+var itineraryLocation1 = document.querySelector(".itinerary-location0")
+var itineraryLocation2 = document.querySelector(".itinerary-location1")
+var itineraryLocation3 = document.querySelector(".itinerary-location2")
+var itineraryLocation4 = document.querySelector(".itinerary-location3")
+var cruiseday1 = document.querySelector(".date-1")
+var cruiseday2 = document.querySelector(".date-2")
+var cruiseday3 = document.querySelector(".date-3")
+var cruiseday4 = document.querySelector(".date-4")
+
+
 
 //if active button is clicked, 
 //then replace button text to dropdown list item
@@ -17,6 +32,93 @@ var button2 = document.getElementById("button2") //button 2
 
 
 function myFunction(element) {
+    debugger
+    // element.nextSibling is the carriage return… The dropdown menu is the next next.
+    if(button1.classList.contains("active")&& button2.classList.contains("active")){
+        itineraryHeader.classList.add("hidden")
+        itineraryTable.classList.add("hidden")
+        button1.textContent = "Destination" 
+        button2.textContent = "Event Type"
+        button1.classList.remove("active")
+        button2.classList.remove("active")
+   
+    }
+    
+    var thisDropdown = element.nextSibling.nextSibling;
+    
+    if (!thisDropdown.classList.contains('show')) {  // Added to hide dropdown if clicking on the one already open
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        dropdowns[i].classList.remove('show'); //shows dropdown list
+      }
+    }
+    
+    // Toggle the dropdown on the element clicked
+    thisDropdown.classList.toggle("show");
+
+    }
+  
+  
+  /* function to close the dropdown when clicked outside. */
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+
+dropdownList1.addEventListener("click", (e)=> {
+
+    if (e.target === westernLI) {
+        // arrowIcon1.style.transform = 'rotate(180deg)'
+        button1.innerText = westernLI.textContent 
+
+        button1.classList.add("active")
+
+    } else if (e.target === carribeanLI) {
+        button1.textContent = carribeanLI.innerHTML
+        button1.classList.add("active")
+    }
+})
+
+dropdownList2.addEventListener("click", (e)=> {
+ 
+    if(e.target === cruisedaysLI) {
+        button2.textContent = cruisedaysLI.innerHTML 
+        button2.classList.add("active")
+    }
+} )
+
+function SubmitFun() {
+    if(button1.classList.contains("active") && button2.classList.contains("active")) {
+        if(button1.textContent === "Southern Carribean") {
+            itineraryHeader.classList.remove("hidden")
+            itineraryTable.classList.remove("hidden")
+        } else if(button1.textContent === "Western Carribean") {
+                itineraryLocation1.textContent = "Mexico"
+                itineraryLocation2.textContent = "Honduras"
+                itineraryLocation3.textContent = "Costa Rica"
+                itineraryLocation4.textContent = "Bahamas"
+                itineraryHeader.classList.remove("hidden")
+                itineraryTable.classList.remove("hidden")
+                cruiseday1.textContent = "Friday, Sep. 1st 2023"
+                cruiseday2.textContent = "Saturday, Sep. 2nd 2023"
+                cruiseday3.textContent = "Sunday, Sep. 3rd 2023"
+                cruiseday4.textContent = "Monday, Sep. 4th 2023"
+                }
+            }
+        }
+
+submitBtn.addEventListener("click", SubmitFun)
+    
+
+        
+// set map option //
 
   // element.nextSibling is the carriage return… The dropdown menu is the next next.
   var thisDropdown = element.nextSibling.nextSibling;
@@ -30,7 +132,7 @@ function myFunction(element) {
 
   // Toggle the dropdown on the element clicked
   thisDropdown.classList.toggle("show");
-}
+
 
 /* function to close the dropdown when clicked outside. */
 window.onclick = function (event) {
@@ -290,6 +392,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setInterval(updateExchangeRates, 10000);
 });
+
   dropBtnEl.addEventListener("click", dropMenuOptions)
 
  // Function to handle adding an excursion to the cart
@@ -342,4 +445,4 @@ addToCartButtons.forEach(button => {
 // Call renderCartItems to display any existing cart items when the page loads
 renderCartItems();
 
-  dropBtnEl.addEventListener("click", dropMenuOptions)
+//   dropBtnEl.addEventListener("click", dropMenuOptions)

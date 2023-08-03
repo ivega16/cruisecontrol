@@ -52,7 +52,7 @@ h1 {
     text-align: center;
 }
 
-
+/* 
 .photos {
     overflow-x: scroll;
     white-space: nowrap;
@@ -67,26 +67,7 @@ h1 {
 
   .photos img:hover {
     border: var(--text-color);
-  }
-
-  .loader {
-    border: 4px solid rgba(255, 255, 255, 0.3);
-    border-top: 4px solid #1C7293;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 2s linear infinite;
-    margin: 0 auto;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
+  } */
 
 
 #exchange-rates {
@@ -158,6 +139,7 @@ h1 {
   .show {
     display:block;
 }
+
     #submit:hover{
         background-color: hsl(30, 100%, 40%);
         /* color: navy; */
@@ -220,6 +202,7 @@ h1 {
 .photos {
     overflow-x: scroll;
     white-space: nowrap;
+}
 
     .photos img:hover {
     border: var(--main-color);
@@ -236,26 +219,6 @@ h1 {
     border: var(--text-color);
   }
 
-  .loader {
-    border: 4px solid rgba(255, 255, 255, 0.3);
-    border-top: 4px solid #1C7293;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 2s linear infinite;
-    margin: 0 auto;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-
 #exchange-rates {
     max-height: 200px;
     overflow-y: auto;
@@ -270,46 +233,7 @@ h1 {
 #exchange-rates li {
     margin: 5px;
 }
-  
 
-  .photos img:hover {
-    border: var(--text-color);
-  }
-
-  .loader {
-    border: 4px solid rgba(255, 255, 255, 0.3);
-    border-top: 4px solid #1C7293;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 2s linear infinite;
-    margin: 0 auto;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-
-#exchange-rates {
-    max-height: 200px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #1C7293;
-}
-
-#exchange-rates li {
-    margin: 5px;
-}
   .card {
     background: linear-gradient(to right, #21295C, #1B3B6F);
     color: white;
@@ -338,7 +262,7 @@ h1 {
     justify-content: center;
   }
   
-  #button-weather {
+  /* button {
     margin: 0.5em;
     border-radius: 50%;
     border: none;
@@ -349,9 +273,9 @@ h1 {
     color: white;
     cursor: pointer;
     transition: 0.2s ease-in-out;
-  }
+  } */
   
-  input.search-bar {
+  .search-bar {
     border: none;
     outline: none;
     padding: 0.4em 1em;
@@ -363,17 +287,17 @@ h1 {
     width: calc(100% - 100px);
   }
   
-  #button-weather:hover {
+  /* button:hover {
     background: #7c7c7c6b;
-  }
+  } */
   
-  h1.temp {
+  .temp {
     margin: 0;
     margin-bottom: 0.4em;
     align-items: center;
   }
 
-  h2.city, div.humidity, div.wind {
+  /* .city, .humidity, .wind {
     align-items: center;
     text-align: center;
   }
@@ -381,7 +305,7 @@ h1 {
   .flex {
     display: flex;
     align-items: center;
-  }
+  } */
   
   
   .description {
@@ -390,7 +314,7 @@ h1 {
    
   }
 
-  img.icon {
+  .icon {
     margin-left: auto;
   }
   
@@ -409,10 +333,12 @@ h1 {
     left: 20px;
   }
 
-  #googleMap {
+  /* #googleMap {
     width: 75%;
     height: 350px;
-  }
+  } */
+
+
 #button-maps {
   color:rgb(23, 21, 153) ;
 }
@@ -433,11 +359,7 @@ h1 {
     text-align: center;
 }
 
-.add-to-cart-btn {
-    margin: 0 auto;
-    background-color: var(--text-color);
-    color: var(--text-color);
-}
+
 
 /* Styling for the cart section (Optional) */
 #cart-section {

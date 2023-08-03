@@ -38,12 +38,33 @@
         <div class="text-center py-5">
             <h1 class="welcome-head text-2xl font-bold text-main-color mb-4 py-5 mx-5">Welcome to Cruise Control!</h1>
             <p class="text-lg text-main-color mx-5">Plan your dream cruise adventure with ease using Cruise Control and navigate your way to paradise. Discover
-                exciting destinations, thrilling excursions, check currency exchange rates, get real-time weather updates and use Google Maps to locate ports for your upcoming cruise.</p>
+                exciting destinations, thrilling <br> excursions, check currency exchange rates, get real-time weather updates and use Google Maps to locate ports for your upcoming cruise.</p>
         </div>
     </section>
     <section class="py-1.5">
-        <h1 id="itinerary" class="itinerary-head text-xl font-bold py-2.5 my-4 mx-5">Itinerary</h1>
-        <table class="table-fixed w-full mx-auto border-collapse border border-white-500 hidden">
+        <div class=" inline-block selection-menu ">
+            <div class="dropdown pl-20 py-8 pb-20 px-5  ">
+                <button onclick="myFunction(this);" id="button1" class="relative dropbtn first-select px-10"><img id="icon1" class="flip-card absolute bottom-3 right-1"
+                        src="./assets/images/down-arrow.png" alt="arrow icon" width="30"
+                        height="30">Destination</button>
+                <div id="myDropdown1" class="dropdown-content locationlist">
+                    <a id="westerncarribean-btn" href="#">Western Carribean</a>
+                    <a id="carribean-btn" href="#">Southern Carribean</a>
+                </div>
+            </div>
+
+            <div class="dropdown ">
+                <button onclick="myFunction(this);" id="button2" class="relative dropbtn second-select px-10 mr-5"><img id="icon2" class="absolute bottom-3 right-1"
+                        src="./assets/images/down-arrow.png" alt="arrow icon" width="30" height="30">Event
+                    Type</button>
+                <div id="myDropdown2" class="dropdown-content cruisetypelist">
+                    <a id="4day-btn" href="#">4-day Cruise</a>
+                </div>
+            </div>
+            <button id="submit" class="static submit border-solid border-2 px-2">Get your Itinerary</button>
+        </div>
+        <h1 id="itinerary" class="itinerary-head text-xl font-bold py-2.5 my-4	hidden">Itinerary</h1>
+        <table id="itinerary-table" class="table-fixed w-full mx-auto border-collapse border border-white-500 hidden">
             <thead class="static">
                 <tr class="text-center">
                     <th class="w-1/7 py-3 px-4 border-b">Date</th>
@@ -55,36 +76,13 @@
                     <th class="w-1/7 py-3 px-4 border-b">Departure</th>
                 </tr>
 
-                <div class=" inline-block selection-menu ">
-                    <div class="dropdown pl-20 py-8 pb-20 px-5  ">
-                        <button onclick="myFunction(this);" id="button1"
-                            class="relative dropbtn first-select px-10"><img id="icon2"
-                                class="absolute bottom-3 right-1" src="./assets/images/down-arrow.png" alt="arrow icon"
-                                width="30" height="30">Destination</button>
-                        <div id="myDropdown1" class="dropdown-content locationlist">
-                            <a id="bahamas-btn" href="#">Bahamas</a>
-                            <a id="carribean-btn" href="#">Caribbean</a>
-                        </div>
-                    </div>
-
-                    <div class="dropdown ">
-                        <button onclick="myFunction(this);" id="button2"
-                            class="relative dropbtn second-select px-10 mr-5"><img id="icon2"
-                                class="absolute bottom-3 right-1" src="./assets/images/down-arrow.png" alt="arrow icon"
-                                width="30" height="30">Event
-                            Type</button>
-                        <div id="myDropdown2" class="dropdown-content cruisetypelist">
-                            <a id="4day-btn" href="#">4-day Cruise</a>
-                        </div>
-                    </div>
-                    <button id="submit" class="static submit border-solid border-2 px-2">Get your Itinerary</button>
-                </div>
+                
 
             </thead>
             <tbody>
                 <tr class="text-center">
-                    <td class="py-2">Thursday, August 3rd 2023</td>
-                    <td class="py-2">Bahamas</td>
+                    <td class="date-1 py-2">Thursday, August 3rd 2023</td>
+                    <td class="itinerary-location0 py-2">Bahamas</td>
                     <td class="py-2">6:30 AM</td>
                     <td class="py-2">8:00 AM</td>
                     <td class="py-2">Excursion 1: Meet at Kiosk 6 (Start Time: 10:30 AM)</td>
@@ -92,8 +90,8 @@
                     <td class="py-2">7:00 PM</td>
                 </tr>
                 <tr class="text-center">
-                    <td class="py-2">Friday, August 4th 2023</td>
-                    <td class="py-2">Puerto Rico</td>
+                    <td class="date-2 py-2">Friday, August 4th 2023</td>
+                    <td class="itinerary-location1 py-2">Puerto Rico</td>
                     <td class="py-2">7:30 AM</td>
                     <td class="py-2">9:00 AM</td>
                     <td class="py-2">Excursion 2: Meet at Gate (Start Time: 11:00 AM)</td>
@@ -101,8 +99,8 @@
                     <td class="py-2">5:00 PM</td>
                 </tr>
                 <tr class="text-center">
-                    <td class="py-2">Saturday, August 5th 2023</td>
-                    <td class="py-2">Dominican Republic</td>
+                    <td class="date-3 py-2">Saturday, August 5th 2023</td>
+                    <td class="itinerary-location2 py-2">Dominican Republic</td>
                     <td class="py-2">6:30 AM</td>
                     <td class="py-2">8:00 AM</td>
                     <td class="py-2">Excursion 3: Meet at Lobby (Start Time: 9:30 AM)</td>
@@ -110,8 +108,8 @@
                     <td class="py-2">6:00 PM</td>
                 </tr>
                 <tr class="text-center">
-                    <td class="py-2">Sunday, August 6th 2023</td>
-                    <td class="py-2">Turks & Caicos</td>
+                    <td class="date-4 py-2">Sunday, August 6th 2023</td>
+                    <td class="itinerary-location3 py-2">Turks & Caicos</td>
                     <td class="py-2">5:30 AM</td>
                     <td class="py-2">7:00 AM</td>
                     <td class="py-2">Excursion 1: Meet at Kiosk 1 (Start Time: 8:30 AM)</td>
@@ -157,7 +155,7 @@
                   
                 </p>
                 <div class="text-center flex justify-center">
-                    <button class="add-to-cart-btn bg-text-color text-cerulean px-4 py-2 rounded-lg focus:outline-none flex items-center justify-center"
+                    <button class="add-to-cart-btn n px-4 py-2 rounded-lg focus:outline-none flex items-center justify-center"
                     data-name="Off-roading in Dominican Republic">Add to
                         Cart</button>
                 </div>
@@ -227,7 +225,7 @@
     </section>
     <!-----------------------Weather section----------------------------------------------->
     <section class="py-1.5">
-        <h1 class="weather-head text-xl font-bold py-2.5 my-4">Current Weather</h1>
+        <h1 class="weather-head text-xl font-bold py-2.5 my-4 mx-5">Current Weather</h1>
         <div class="card">
             <div class="search">
                 <input type="text" class="search-bar" placeholder="Search">
@@ -252,9 +250,9 @@
     </section>
     <!---------------------------Google Maps-------------------------------------------->
     <section class="py-1.5">
-        <h1 class="weather-head text-xl font-bold py-2.5 my-4">Maps</h1>
+        <h1 class="weather-head text-xl font-bold py-2.5 my-4 mx-5">Maps</h1>
         <div class="box-content">
-            <div class="p-px mx-30 pr-0.5 float-left mx-7 items-center">
+            <!-- <div class="p-px mx-30 pr-0.5 float-left mx-7 items-center"> -->
           <!----     <p id="maps-text">Locate a port or calculate your driving distance</p> --->
                 <form class="form-horizontal">
                     <div class="form-group">
