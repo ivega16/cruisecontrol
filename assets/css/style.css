@@ -62,8 +62,6 @@ h1 {
     width: 375px;
     height: 250px;
     margin-right: 10px;
-<<<<<<<<< Temporary merge branch 1
-<<<<<<<<< Temporary merge branch 1
     border: var(--main-color);
   }
 
@@ -105,8 +103,7 @@ h1 {
 #exchange-rates li {
     margin: 5px;
 }
-=========
-  }
+
 
   .submit {
     border-color: #ff8309;
@@ -224,7 +221,7 @@ h1 {
 .photos {
     overflow-x: scroll;
     white-space: nowrap;
-
+}
     .photos img:hover {
     border: var(--main-color);
   }
@@ -342,7 +339,7 @@ h1 {
     justify-content: center;
   }
   
-  /* button {
+  #button-weather {
     margin: 0.5em;
     border-radius: 50%;
     border: none;
@@ -367,7 +364,7 @@ h1 {
     width: calc(100% - 100px);
   }
   
-  /* button:hover {
+  #button-weather:hover {
     background: #7c7c7c6b;
   } */
   
@@ -414,10 +411,13 @@ h1 {
   }
 
   #googleMap {
-    width: 60%;
-    height: 400px;
-    margin: 20px auto;
+    width: 75%;
+    height: 350px;
   }
+#button-maps {
+  color:rgb(23, 21, 153) ;
+}
+
   
 @media only screen and (device-width: 414px) and (device-height:896px) and (-webkit-device-pixel-ratio: 2) {
     .dropdown {
