@@ -231,6 +231,45 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(updateExchangeRates, 10000);
   });
 
+  // Function to handle form submission
+function handleSubmit(event) {
+    event.preventDefault();
+  
+    // Get the values from the form inputs
+    const username = document.getElementById("username").value.trim();
+    const review = document.getElementById("review").value.trim();
+  
+    // Check if the username and review are not empty
+    if (username === "" || review === "") {
+      alert("Please enter both your username and review.");
+      return;
+    }
+  
+    // Create a review object with the username and review content
+    const reviewObject = {
+      username,
+      review,
+      date: new Date().toISOString(), // Add the current date for reference
+    };
+  
+    // Save the review to local storage
+    let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+    reviews.push(reviewObject);
+    localStorage.setItem("reviews", JSON.stringify(reviews));
+  
+    // Clear the form inputs after submitting the review
+    document.getElementById("username").value = "";
+    document.getElementById("review").value = "";
+  
+    alert("Review posted successfully!");
+  }
+  
+  // Add event listener to the form submission
+  const reviewForm = document.getElementById("review-form");
+  reviewForm.addEventListener("submit", handleSubmit);
+  
+  
+
 
 
 
