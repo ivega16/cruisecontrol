@@ -1,4 +1,4 @@
-# project1
+# Project 1: Cruise Control
 
 
 # Cruise Control Website
@@ -25,7 +25,7 @@ Welcome to the Cruise Control website! This website is designed to provide users
 
 ### User Reviews
 - Read authentic reviews and experiences shared by other cruise enthusiasts.
-- Share your own reviews to help others make informed decisions.
+- Share your own reviews to help others make informed decisions. You can also add your own reviews and those reviews save in the local storage.
 
 ## Getting Started
 

@@ -232,6 +232,7 @@ h1 {
 
 #exchange-rates li {
     margin: 5px;
+    color: var(--text-color);
 }
 
   .card {
@@ -274,7 +275,7 @@ h1 {
     transition: 0.2s ease-in-out;
   }
    */
-   
+
   .search-bar {
     border: none;
     outline: none;
@@ -379,4 +380,12 @@ h1 {
 
 .cart-item {
     margin-bottom: 0.5rem;
+}
+
+#username {
+  margin-bottom: 5pt;
+}
+
+#review {
+  margin-left: 17.5pt;
 }

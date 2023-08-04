@@ -43,7 +43,7 @@
     </section>
     <section class="py-1.5">
         <div class=" inline-block selection-menu ">
-            <div class="dropdown pl-20 py-8 pb-20 px-5  ">
+            <div class="dropdown pl-20 py-8 pb-20 px-5 ">
                 <button onclick="myFunction(this);" id="button1" class="relative dropbtn first-select px-10"><img id="icon1" class="flip-card absolute bottom-3 right-1"
                         src="./assets/images/down-arrow.png" alt="arrow icon" width="30"
                         height="30">Destination</button>
@@ -361,6 +361,26 @@
             </div>
             </div>
         </section>
+
+        <section class="py-1.5">
+            <h1 class="weather-head text-xl font-bold py-2.5 my-4 mx-5">Write a Review</h1>
+            <div class="card">
+                <form id="review-form" class="p-4">
+                    <div class="form-group">
+                        <label for="username" class="text-main-color font-bold my-2">Username:</label>
+                        <input type="text" id="username" class="caret-blue-500 text-black py-2" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="review" class="text-main-color font-bold my-2">Review:</label>
+                        <textarea id="review" rows="4" class="caret-blue-500 text-black" required></textarea>
+                    </div>
+                    <div class="flex justify-center mt-4">
+                        <button type="submit" class="btn btn-info btn-lg my-2" id="post-review-btn">Post Review</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
         <script
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAF0FAnNK2ASkoCK-6zxMo7gNySMUFQVnQ&libraries=places"></script>
         <script>
