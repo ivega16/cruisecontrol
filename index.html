@@ -22,8 +22,9 @@
 </head>
 
 <body>
-    <header class="py-5">
-        <h1 class="logo font-sans subpixel-antialiased">Cruise Control</h1>
+    <header class="py-10">
+        <h1 class="logo font-sans subpixel-antialiased text-4xl">Cruise Control</h1>
+        
         <nav>
             <a href="#home">Home</a>
             <a href="#itinerary">Itinerary</a>
@@ -33,13 +34,13 @@
             <a href="#gallery">Gallery</a>
         </nav>
     </header>
-    <section class="py-1.5">
-        <section class="py-1.5 bg-second-bg-color">
-            <div class="text-center py-5">
-                <h1 class="welcome-head text-2xl font-bold text-main-color mb-4 py-5 mx-5">Welcome to Cruise Control!</h1>
-                <p class="text-lg text-main-color mx-5">Plan your dream cruise adventure with ease using Cruise Control and navigate your way to paradise. Discover
-                    exciting destinations, thrilling <br> excursions, check currency exchange rates, get real-time weather updates and use Google Maps to locate ports for your upcoming cruise.</p>
-            </div>
+    <section class="py-1.5 bg-second-bg-color">
+        <div class="text-center py-5">
+            <h1 class="welcome-head text-2xl font-bold text-main-color mb-4 py-5 mx-5">Welcome to Cruise Control!</h1>
+            <p class="text-lg text-main-color mx-5">Plan your dream cruise adventure with ease using Cruise Control and navigate your way to paradise. Discover
+                exciting destinations, thrilling <br> excursions, check currency exchange rates, get real-time weather updates and use Google Maps to locate ports for your upcoming cruise.</p>
+        </div>
+    </section>
         </section>
         <div class="flex justify-center inline-block selection-menu ">
             <div class="dropdown py-8 px-5  ">
@@ -137,16 +138,26 @@
                     Paddle through crystal-clear waters and explore hidden coves and mangrove forests. Discover the
                     rich marine life and breathtaking coral reefs, making it a perfect adventure for nature lovers and
                     water enthusiasts.
+                    
                 </p>
+                <div class="text-center flex justify-center">
+                    <button class="add-to-cart-btn bg-text-color text-cerulean px-4 py-2 rounded-lg focus:outline-none flex justify-center items-center"
+                    data-name="Kayaking in the Bahamas">Add to
+                        Cart</button>
+                </div>
             </div>
 
             <div class="bg-cerulean-800 rounded-lg shadow-md p-4">
                 <p class="font-bold">Off-roading in Dominican Republic:</p>
                 <p>
-                    Embark on an adrenaline-fueled off-road journey, driving through rugged terrains and lush tropical
-                    landscapes. Experience the authentic beauty of the Dominican Republic and witness stunning panoramic
-                    views from mountain peaks.
+                    Embark on an adrenaline-fueled off-road journey through lush tropical landscapes. Experience the authentic beauty of the Dominican Republic and witness stunning panoramic views from mountain peaks.
+                  
                 </p>
+                <div class="text-center flex justify-center">
+                    <button class="add-to-cart-btn n px-4 py-2 rounded-lg focus:outline-none flex items-center justify-center"
+                    data-name="Off-roading in Dominican Republic">Add to
+                        Cart</button>
+                </div>
             </div>
 
             <div class="bg-cerulean-800 rounded-lg shadow-md p-4">
@@ -156,6 +167,11 @@
                     adrenaline as you glide from platform to platform, enjoying breathtaking views of the surrounding
                     landscapes.
                 </p>
+                <div class="text-center flex justify-center">
+                    <button class="add-to-cart-btn bg-text-color text-cerulean px-4 py-2 rounded-lg focus:outline-none flex items-center justify-center"
+                    data-name="Zip-lining in Puerto Rico">Add to
+                        Cart</button>
+                </div>
             </div>
 
             <div class="bg-cerulean-800 rounded-lg shadow-md p-4">
@@ -165,6 +181,11 @@
                     Experience the thrill of interacting with these majestic creatures while exploring the vibrant
                     marine life of the Caribbean.
                 </p>
+                <div class="text-center flex justify-center">
+                    <button class="add-to-cart-btn bg-text-color text-cerulean px-4 py-2 rounded-lg focus:outline-none flex items-center justify-center"
+                    data-name="Snorkeling with Stingrays">Add to
+                        Cart</button>
+                </div>
             </div>
 
             <div class="bg-cerulean-800 rounded-lg shadow-md p-4">
@@ -173,6 +194,11 @@
                     Bounce and play on a floating trampoline in the middle of the ocean. Enjoy the refreshing sea
                     breeze as you have fun with friends and family on this unique water attraction.
                 </p>
+                <div class="text-center flex justify-center">
+                    <button class="add-to-cart-btn bg-text-color text-cerulean px-4 py-2 rounded-lg focus:outline-none flex items-center justify-center"
+                    data-name="Ocean Trampoline">Add to
+                        Cart</button>
+                </div>
             </div>
 
             <div class="bg-cerulean-800 rounded-lg shadow-md p-4">
@@ -182,18 +208,23 @@
                     coastline. Perfect for beginners and seasoned paddlers alike, this excursion offers a serene and
                     unforgettable experience.
                 </p>
+                <div class="text-center flex justify-center">
+                    <button class="add-to-cart-btn bg-text-color text-cerulean px-4 py-2 rounded-lg focus:outline-none flex items-center justify-center"
+                    data-name="Paddle Boarding through Dominican Republic">Add to
+                        Cart</button>
+                </div>
             </div>
         </div>
     </section>
     <section class="py-1.5 overflow-auto" id="currency-exchange">
         <h1 class="currency-head text-xl font-bold py-2.5 my-4 mx-5">Currency Exchange</h1>
-        <ul class="flex flex-col items-center mt-3" id="exchange-rates">
+        <ul class="flex flex-col items-center mt-3 text-text-color" id="exchange-rates">
             <!-- Exchange rate data will be dynamically added here -->
         </ul>
     </section>
     <!-----------------------Weather section----------------------------------------------->
     <section class="py-1.5">
-        <h1 class="weather-head text-xl font-bold py-2.5 my-4">Current Weather</h1>
+        <h1 class="weather-head text-xl font-bold py-2.5 my-4 mx-5">Current Weather</h1>
         <div class="card">
             <div class="search">
                 <input type="text" class="search-bar" placeholder="Search">
@@ -204,23 +235,23 @@
                         </path>
                     </svg></button>
             </div>
-            <div class="weather loading">
-                <h2 class="city">Weather in miami</h2>
-                <h1 class="temp">98°F</h1>
-                <div class="flex">
-                    <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
-                    <div class="description">Sunny</div>
+            <div class="weather loading p-4">
+                <h2 class="city text-xl font-bold text-main-color mb-2 text-center">Weather in Miami</h2>
+                <h1 class="temp text-4xl font-bold text-main-color text-center">98°F</h1>
+                <div class="flex items-center justify-center">
+                    <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="w-12 h-12">
+                    <div class="description text-lg text-main-color ml-2 text-center">Sunny</div>
                 </div>
-                <div class="humidity">Humidity: 58%</div>
-                <div class="wind">Wind speed: 6.2 MPH</div>
+                <div class="humidity text-main-color text-center">Humidity: 58%</div>
+                <div class="wind text-main-color text-center">Wind speed: 6.2 MPH</div>
             </div>
         </div>
     </section>
     <!---------------------------Google Maps-------------------------------------------->
     <section class="py-1.5">
-        <h1 class="weather-head text-xl font-bold py-2.5 my-4">Maps</h1>
+        <h1 class="weather-head text-xl font-bold py-2.5 my-4 mx-5">Maps</h1>
         <div class="box-content">
-            <div class="p-px mx-30 pr-0.5 float-left mx-7 items-center">
+            <!-- <div class="p-px mx-30 pr-0.5 float-left mx-7 items-center"> -->
           <!----     <p id="maps-text">Locate a port or calculate your driving distance</p> --->
                 <form class="form-horizontal">
                     <div class="form-group">
@@ -241,10 +272,11 @@
 
                     </div>
 
+
                 </form>
 
-                <div class=" ml-20 p-2 w-9 m-9 bg-white rounded-xl shadow-lg flex items-center space-x-1">
-                    <button id="button-maps" class="btn btn-info btn-lg" onclick="calcRoute();"><i
+                <div class=" ml-20 p-2 w-9 m-9 bg-white rounded-xl shadow-lg flex items-center space-x-1 flex justify-center">
+                    <button id="button-maps" class="btn btn-info btn-lg flex justify-center" onclick="calcRoute();"><i
                             class="fas fa-directions"></i></button>
                 </div>
             </div>
@@ -328,6 +360,26 @@
             </div>
             </div>
         </section>
+
+        <section class="py-1.5">
+            <h1 class="weather-head text-xl font-bold py-2.5 my-4 mx-5">Write a Review</h1>
+            <div class="card">
+                <form id="review-form" class="p-4">
+                    <div class="form-group">
+                        <label for="username" class="text-main-color font-bold my-2">Username:</label>
+                        <input type="text" id="username" class="caret-blue-500 text-black py-2" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="review" class="text-main-color font-bold my-2">Review:</label>
+                        <textarea id="review" rows="4" class="caret-blue-500 text-black" required></textarea>
+                    </div>
+                    <div class="flex justify-center mt-4">
+                        <button type="submit" class="btn btn-info btn-lg my-2" id="post-review-btn">Post Review</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
         <script
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAF0FAnNK2ASkoCK-6zxMo7gNySMUFQVnQ&libraries=places"></script>
         <script>
