@@ -8,7 +8,7 @@ var button1 = document.getElementById("button1") //button 1
 var button2 = document.getElementById("button2") //button 2
 var arrowIcon1 = document.getElementById("icon1") //first icon on button 1
 var arrowIcon2 = document.getElementById("icon2") //second icon on button 2
-var submitBtn = document.getElementById("submit") //submitt btn 
+var submitBtn = document.getElementById("submit") //submit btn 
 var itineraryHeader = document.getElementById("itinerary") //itinerary header
 var itineraryTable = document.getElementById("itinerary-table") //itinerary table
 var itineraryLocation1 = document.querySelector(".itinerary-location0")
@@ -374,4 +374,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setInterval(updateExchangeRates, 10000);
 });
+
+  // Function to handle form submission
+function handleSubmit(event) {
+    event.preventDefault();
+  
+    // Get the values from the form inputs
+    const username = document.getElementById("username").value.trim();
+    const review = document.getElementById("review").value.trim();
+  
+    // Check if the username and review are not empty
+    if (username === "" || review === "") {
+      alert("Please enter both your username and review.");
+      return;
+    }
+  
+    // Create a review object with the username and review content
+    const reviewObject = {
+      username,
+      review,
+      date: new Date().toISOString(), // Add the current date for reference
+    };
+  
+    // Save the review to local storage
+    let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+    reviews.push(reviewObject);
+    localStorage.setItem("reviews", JSON.stringify(reviews));
+  
+    // Clear the form inputs after submitting the review
+    document.getElementById("username").value = "";
+    document.getElementById("review").value = "";
+  
+  }
+  
+  // Add event listener to the form submission
+  const reviewForm = document.getElementById("review-form");
+  reviewForm.addEventListener("submit", handleSubmit);
+  
+  
+
+
+
 
